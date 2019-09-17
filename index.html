@@ -1,0 +1,208 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Efforts-Tracking</title>
+    <meta name="description" content="Tracking of the efforts">
+    <meta name="author" content="Marko Apfel">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="//code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="//code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+    <link type="text/css" rel="stylesheet" href="fsharp.formatting/styles/style.css" />
+    <link type="text/css" rel="stylesheet" href="fsharp.formatting/styles/deedle.css" />
+    <link type="text/css" rel="stylesheet" href="css/custom.css" />
+    <script src="fsharp.formatting/styles/tips.js" type="text/javascript"></script>
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/fsreveal.css">
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <script language="javascript" type="text/javascript">
+        function init()
+        {
+            websocket = new WebSocket("ws://"+window.location.host+"/websocket");
+            websocket.onmessage = function(evt) { location.reload(); };
+        }
+        window.addEventListener("load", init, false);
+    </script>
+</head>
+<body>
+    <div class="reveal">
+        
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section id="NewTools">
+<h3>New tools</h3>
+<ul>
+<li>FsReveal</li>
+<li>DocFX</li>
+<li>Slack</li>
+</ul>
+</section>
+<section >
+<h2>Introduced FsReveal</h2>
+<ul>
+<li>to provide fancy presentations</li>
+<li>neutralized the tWiki presentation from the past</li>
+<li>
+started to host that version at<br />
+<a href="http://mapfel.github.io/wiki-presentation"><a href="http://mapfel.github.io/wiki-presentation">http://mapfel.github.io/wiki-presentation</a></a>
+</li>
+<li>
+which is the same as<br />
+<a href="http://blog.apfel.space/wiki-presentation/"><a href="http://blog.apfel.space/wiki-presentation/">http://blog.apfel.space/wiki-presentation/</a></a>
+</li>
+<li>it can be used as the template for company specific presentations</li>
+<li>
+redirecting of the sub domain was made in the past<br />
+→ have to figure out how
+</li>
+</ul>
+</section>
+<section >
+<section id="DocFx.2019-09">
+<h2>DocFX</h2>
+<ul>
+<li>Microsoft developed documentation tool</li>
+<li>open source successor of SHFB</li>
+<li>
+allows easily mix code documentation with additional content<br />
+(e.g. XML Comments, API documentation (OAS), tutorials,...)
+</li>
+<li>great support for .NET Core projects</li>
+</ul>
+</section>
+<section >
+<h3>Mix XML Comment with Wiki</h3>
+<ul>
+<li>currently the XML Comments are merged together with Wiki content</li>
+<li>it is done inside the <code>docfx.json</code> file</li>
+</ul>
+<p><img src="./images/2019-09.Documentation.03.png" alt="" /></p>
+<h3>Host the DocFX output via GitHub Pages</h3>
+<ul>
+<li>used the <code>apm1grb</code> account to host the <strong>DocFX</strong> output</li>
+<li>you can find here: <a href="https://apm1grb.github.io/"><a href="https://apm1grb.github.io/">https://apm1grb.github.io/</a></a></li>
+<li>technically the content of the <code>_site</code> folder was included in an own repo</li>
+</ul>
+<p><img src="./images/2019-09.Documentation.02.png" alt="" /></p>
+<h3>Use Git Submodules to link source code together with Wiki content and DocFX pimped source code XML Comments</h3>
+<ul>
+<li>realized as sub modules</li>
+<li>checkout of the Wiki repo below <code>doc</code> folder</li>
+<li>checkout of "<code>_site</code>-repo" below <code>doc</code> folder</li>
+<li>
+needs awareness about workflows<br />
+(when the pull Wiki and to push "<code>_site</code>-repo")
+</li>
+</ul>
+</section>
+<section >
+<h3>Provide complete XML Comments</h3>
+<ul>
+<li>completely documented all public and protected interfaces</li>
+<li>re-introduced GhostDoc in toolset</li>
+</ul>
+<p><img src="./images/2019-09.Documentation.01.png" alt="" /></p>
+</section>
+</section>
+<section >
+<section >
+<h2>Slack</h2>
+<ul>
+<li>cloud-based set of team collaboration software tools and online services</li>
+<li>Slack = "Searchable Log of All Conversation and Knowledge."</li>
+<li>Most famous platform</li>
+</ul>
+</section>
+<section >
+<ul>
+<li>created a workspace, prepared some channels</li>
+<li>invited SM, FM</li>
+</ul>
+<p><img src="./images/2019-09.Tools.Slack.01.png" alt="" /></p>
+</section>
+<section >
+<h3>Contact with colleagues in AC</h3>
+<ul>
+<li>alternative platform: <strong>Mattermost</strong></li>
+<li>on-prem possible &amp; open source</li>
+<li>not really adopted there</li>
+</ul>
+</section>
+</section>
+<section >
+<section id="Wiki.2019-09">
+<h2>BVMS UI Automation Wiki</h2>
+<ul>
+<li>started to create a project Wiki</li>
+<li>based on Azure DevOps (Git &amp; Markdown)</li>
+<li>capture knowledge about the BVMS UI Automation</li>
+<li>provide SMM, SDS,...</li>
+</ul>
+</section>
+<section >
+<h3>Start with some basic knowledge</h3>
+<p><img src="./images/2019-09.Wiki.01.png" alt="" /></p>
+</section>
+</section>
+<section id="EvaluationUiAutomation.2019-07">
+<h2>Evaluate UI Automation Frameworks</h2>
+</section>
+
+
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+        // Add the nohighlight class and data-noescape attribute to code elements that have already been formatted by FSharp.Formatting
+        $('pre.highlighted code').addClass('nohighlight').attr('data-noescape', '');
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+            ]
+        });
+
+    </script>
+</body>
+</html>
+
