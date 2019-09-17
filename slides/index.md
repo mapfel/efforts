@@ -1,164 +1,120 @@
-- title : FsReveal
-- description : Introduction to FsReveal
-- author : Karlkim Suwanmongkol
+- title : Efforts-Tracking
+- description : Tracking of the efforts
+- author : Marko Apfel
 - theme : night
 - transition : default
 
 ***
+- id: NewTools
 
-### What is FsReveal?
+### New tools
 
-- Generates [reveal.js](http://lab.hakim.se/reveal-js/#/) presentation from [markdown](http://daringfireball.net/projects/markdown/)
-- Utilizes [FSharp.Formatting](https://github.com/tpetricek/FSharp.Formatting) for markdown parsing
-- Get it from [http://fsprojects.github.io/FsReveal/](http://fsprojects.github.io/FsReveal/)
-
-![FsReveal](images/logo.png)
-
-***
-
-### Reveal.js
-
-- A framework for easily creating beautiful presentations using HTML.
-
-
-> **Atwood's Law**: any application that can be written in JavaScript, will eventually be written in JavaScript.
+- FsReveal
+- DocFX
+- Slack
 
 ***
 
-### FSharp.Formatting
+## Introduced FsReveal
 
-- F# tools for generating documentation (Markdown processor and F# code formatter).
-- It parses markdown and F# script file and generates HTML or PDF.
-- Code syntax highlighting support.
-- It also evaluates your F# code and produce tooltips.
+- to provide fancy presentations
+- neutralized the tWiki presentation from the past
+- started to host that version at  
+  [http://mapfel.github.io/wiki-presentation](http://mapfel.github.io/wiki-presentation)
+- which is the same as  
+  [http://blog.apfel.space/wiki-presentation/](http://blog.apfel.space/wiki-presentation/)
+- it can be used as the template for company specific presentations
+- redirecting of the sub domain was made in the past  
+  → have to figure out how 
+
+***
+- id : DocFx.2019-09
+
+## DocFX
+
+- Microsoft developed documentation tool
+- open source successor of SHFB
+- allows easily mix code documentation with additional content  
+  (e.g. XML Comments, API documentation (OAS), tutorials,...)
+- great support for .NET Core projects
+
+---
+
+### Mix XML Comment with Wiki
+
+- currently the XML Comments are merged together with Wiki content
+- it is done inside the `docfx.json` file
+
+![](./images/2019-09.Documentation.03.png)
+
+
+### Host the DocFX output via GitHub Pages
+
+- used the `apm1grb` account to host the **DocFX** output 
+- you can find here: [https://apm1grb.github.io/](https://apm1grb.github.io/)
+- technically the content of the `_site` folder was included in an own repo
+
+![](./images/2019-09.Documentation.02.png)
+
+
+### Use Git Submodules to link source code together with Wiki content and DocFX pimped source code XML Comments
+
+- realized as sub modules
+- checkout of the Wiki repo below `doc` folder 
+- checkout of "`_site`-repo" below `doc` folder 
+- needs awareness about workflows  
+  (when the pull Wiki and to push "`_site`-repo")
+
+---
+
+### Provide complete XML Comments
+
+- completely documented all public and protected interfaces
+- re-introduced GhostDoc in toolset
+
+![](./images/2019-09.Documentation.01.png)
 
 ***
 
-### Syntax Highlighting
+## Slack
 
-#### F# (with tooltips)
-
-    let a = 5
-    let factorial x = [1..x] |> List.reduce (*)
-    let c = factorial a
+- cloud-based set of team collaboration software tools and online services
+- Slack = "Searchable Log of All Conversation and Knowledge."
+- Most famous platform
 
 ---
 
-#### C#
+- created a workspace, prepared some channels
+- invited SM, FM
 
-    [lang=cs]
-    using System;
-
-    class Program
-    {
-        static void Main()
-        {
-            Console.WriteLine("Hello, world!");
-        }
-    }
+![](./images/2019-09.Tools.Slack.01.png)
 
 ---
 
-#### JavaScript
+### Contact with colleagues in AC
 
-    [lang=js]
-    function copyWithEvaluation(iElem, elem) {
-        return function (obj) {
-            var newObj = {};
-            for (var p in obj) {
-                var v = obj[p];
-                if (typeof v === "function") {
-                    v = v(iElem, elem);
-                }
-                newObj[p] = v;
-            }
-            if (!newObj.exactTiming) {
-                newObj.delay += exports._libraryDelay;
-            }
-            return newObj;
-        };
-    }
-
-
----
-
-#### Haskell
- 
-    [lang=haskell]
-    recur_count k = 1 : 1 : 
-        zipWith recurAdd (recur_count k) (tail (recur_count k))
-            where recurAdd x y = k * x + y
-
-    main = do
-      argv <- getArgs
-      inputFile <- openFile (head argv) ReadMode
-      line <- hGetLine inputFile
-      let [n,k] = map read (words line)
-      printf "%d\n" ((recur_count k) !! (n-1))
-
-*code from [NashFP/rosalind](https://github.com/NashFP/rosalind/blob/master/mark_wutka%2Bhaskell/FIB/fib_ziplist.hs)*
-
----
-
-### SQL
-
-    [lang=sql]
-    select *
-    from
-    (select 1 as Id union all select 2 union all select 3) as X
-    where Id in (@Ids1, @Ids2, @Ids3)
-
-*sql from [Dapper](https://code.google.com/p/dapper-dot-net/)*
-
----
-
-### Paket
-
-    [lang=paket]
-    source https://nuget.org/api/v2
-
-    nuget Castle.Windsor-log4net >= 3.2
-    nuget NUnit
-    
-    github forki/FsUnit FsUnit.fs
-      
----
-
-### C/AL
-
-    [lang=cal]
-    PROCEDURE FizzBuzz(n : Integer) r_Text : Text[1024];
-    VAR
-      l_Text : Text[1024];
-    BEGIN
-      r_Text := '';
-      l_Text := FORMAT(n);
-
-      IF (n MOD 3 = 0) OR (STRPOS(l_Text,'3') > 0) THEN
-        r_Text := 'Fizz';
-      IF (n MOD 5 = 0) OR (STRPOS(l_Text,'5') > 0) THEN
-        r_Text := r_Text + 'Buzz';
-      IF r_Text = '' THEN
-        r_Text := l_Text;
-    END;
+- alternative platform: **Mattermost**
+- on-prem possible & open source
+- not really adopted there
 
 ***
+- id : Wiki.2019-09
 
-**Bayes' Rule in LaTeX**
+## BVMS UI Automation Wiki
 
-$ \Pr(A|B)=\frac{\Pr(B|A)\Pr(A)}{\Pr(B|A)\Pr(A)+\Pr(B|\neg A)\Pr(\neg A)} $
+- started to create a project Wiki
+- based on Azure DevOps (Git & Markdown)
+- capture knowledge about the BVMS UI Automation
+- provide SMM, SDS,...
+
+---
+
+### Start with some basic knowledge
+
+![](./images/2019-09.Wiki.01.png)
 
 ***
+- id : EvaluationUiAutomation.2019-07
 
-### The Reality of a Developer's Life 
-
-**When I show my boss that I've fixed a bug:**
-  
-![When I show my boss that I've fixed a bug](http://www.topito.com/wp-content/uploads/2013/01/code-07.gif)
-  
-**When your regular expression returns what you expect:**
-  
-![When your regular expression returns what you expect](http://www.topito.com/wp-content/uploads/2013/01/code-03.gif)
-  
-*from [The Reality of a Developer's Life - in GIFs, Of Course](http://server.dzone.com/articles/reality-developers-life-gifs)*
+## Evaluate UI Automation Frameworks
 
