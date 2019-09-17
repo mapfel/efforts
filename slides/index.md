@@ -47,6 +47,7 @@
 
 ![](./images/2019-09.Documentation.03.png)
 
+---
 
 ### Host the DocFX output via GitHub Pages
 
@@ -56,6 +57,7 @@
 
 ![](./images/2019-09.Documentation.02.png)
 
+---
 
 ### Use Git Submodules to link source code together with Wiki content and DocFX pimped source code XML Comments
 
