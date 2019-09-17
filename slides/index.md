@@ -55,7 +55,25 @@
 - you can find here: [https://apm1grb.github.io/](https://apm1grb.github.io/)
 - technically the content of the `_site` folder was included in an own repo
 
+</br>
+
 ![](./images/2019-09.Documentation.02.png)
+
+---
+
+### Wiki part of the documentation
+
+</br>
+
+![](./images/2019-09.Documentation.04.png)
+
+---
+
+### Code/API/SDK part of the documentation
+
+</br>
+
+![](./images/2019-09.Documentation.05.png)
 
 ---
 
