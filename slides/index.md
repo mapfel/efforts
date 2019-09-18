@@ -10,10 +10,16 @@
 
 ### How to use this Slide
 
-- see right-down navigation hints
-- use ⬅ and ⮕ to navigate between main topics
-- use ⬆ and ⬇ to navigate between sub topics
-- use `ESC` to see the slide-map
+- see right-down navigation hints  
+  (yellow triangles show which navigation direction is possible)
+- Navigation between topics with arrow keys
+    - use ⬅ and ➡ to navigate between main topics
+    - use ⬆ and ⬇ to navigate between sub topics
+- other keys
+    - use `ESC` to see the slide-map
+    - use `f` for full screen
+
+' find unicode arrows [here](http://xahlee.info/comp/unicode_arrows.html)
 
 ***
 - id : Organizational
@@ -43,13 +49,54 @@
 ***
 - id : NewTools
 
-## New tools
+## New tools, techniques
 
-- FsReveal
-- DocFX
-- Slack
+- **Slack**: seamless and productive messaging and co-working
+- **FsReveal**: fancy presentations with versioning for devs
+- **DocFX**: documentation
+- **Git**: versioning
+- **Markdown**: productive markup language for Wikis and other documentations
+- **Azure DevOps**: ALM platform with Wiki, pipelines, ... 
 
-***
+---
+
+### Slack
+
+- cloud-based set of team collaboration software tools and online services
+- Slack = "Searchable Log of All Conversation and Knowledge."
+- Most famous platform
+
+---
+
+#### Status Quo
+
+- created a workspace, prepared some channels
+- invited SM, FM
+
+![](./images/2019-09.Tools.Slack.01.png)
+
+---
+
+### Alternatives
+
+<br/>
+<br/>
+
+#### Contact with colleagues in AC
+
+- alternative platform: **Mattermost**
+- on-prem possible & open source
+- not really adopted there
+
+<br/>
+<br/>
+
+#### Road Ahead with O365
+
+- under investigation, no rollout schedule
+- Teams as the successor of Skpye would be a perfect alternative
+
+---
 
 ### Introduced FsReveal
 
@@ -63,16 +110,26 @@
 - redirecting of the sub domain was made in the past  
   → have to figure out how 
 
+> [Homepage FsReveal](http://fsprojects.github.io/FsReveal/)
+
+---
+
+### DocFX
+
+> see dedicated main topic [DocFX](#/DocFx.2019-09)
+
 ***
 - id : DocFx.2019-09
 
 ### DocFX
 
 - Microsoft developed documentation tool
-- open source successor of SHFB
+- open source successor of SHFB for multiple platforms
 - allows easily mix code documentation with additional content  
-  (e.g. XML Comments, API documentation (OAS), tutorials,...)
+  (e.g. XML Comments, API documentation (OAS), tutorials, concepts,...)
 - great support for .NET Core projects
+
+> [Homepage DocFX](https://dotnet.github.io/docfx/)
 
 ---
 
@@ -129,34 +186,6 @@
 - re-introduced GhostDoc in toolset
 
 ![](./images/2019-09.Documentation.01.png)
-
----
-
-### Slack
-
-- cloud-based set of team collaboration software tools and online services
-- Slack = "Searchable Log of All Conversation and Knowledge."
-- Most famous platform
-
----
-
-- created a workspace, prepared some channels
-- invited SM, FM
-
-![](./images/2019-09.Tools.Slack.01.png)
-
----
-
-#### Contact with colleagues in AC
-
-- alternative platform: **Mattermost**
-- on-prem possible & open source
-- not really adopted there
-
-#### Road Ahead with O365
-
-- under investigation, no rollout schedule
-- Teams as the successor of Skpye would be a perfect alternative
 
 ***
 - id : Wiki.2019-09
