@@ -117,6 +117,11 @@
 - on-prem possible & open source
 - not really adopted there
 
+### Road Ahead with O365
+
+- under investigation, no rollout schedule
+- Teams as the successor of Skpye would be a perfect alternative
+
 ***
 - id : Wiki.2019-09
 
