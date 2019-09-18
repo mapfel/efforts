@@ -5,9 +5,45 @@
 - transition : default
 
 ***
-- id: NewTools
 
-### New tools
+## Efforts and Tracking
+
+### How to use this Slide
+
+- see right-down navigation hints
+- use ⬅ and ⮕ to navigate between main topics
+- use ⬆ and ⬇ to navigate between sub topics
+- use `ESC` to see the slide-map
+
+***
+- id : Organizational
+
+## Organizational and other topics
+
+- ToDos and open tasks
+- Annoying things
+
+---
+
+### ToDos and open tasks
+
+- How to spread knowledge about XCopy-deployable tools?
+- Road ahead and decicion about future of VCS?
+    - Transition to Git
+    - Recommendation for new projects/repos
+- Road ahead with Wiki?
+
+---
+
+### Annoying things
+
+- not for the public
+- see OneNote "Annoying Things"
+
+***
+- id : NewTools
+
+## New tools
 
 - FsReveal
 - DocFX
@@ -15,7 +51,7 @@
 
 ***
 
-## Introduced FsReveal
+### Introduced FsReveal
 
 - to provide fancy presentations
 - neutralized the tWiki presentation from the past
@@ -30,7 +66,7 @@
 ***
 - id : DocFx.2019-09
 
-## DocFX
+### DocFX
 
 - Microsoft developed documentation tool
 - open source successor of SHFB
@@ -40,7 +76,7 @@
 
 ---
 
-### Mix XML Comment with Wiki
+#### Mix XML Comment with Wiki
 
 - currently the XML Comments are merged together with Wiki content
 - it is done inside the `docfx.json` file
@@ -49,7 +85,7 @@
 
 ---
 
-### Host the DocFX output via GitHub Pages
+#### Host the DocFX output via GitHub Pages
 
 - used the `apm1grb` account to host the **DocFX** output 
 - you can find here: [https://apm1grb.github.io/](https://apm1grb.github.io/)
@@ -61,7 +97,7 @@
 
 ---
 
-### Wiki part of the documentation
+#### Wiki part of the documentation
 
 </br>
 
@@ -69,7 +105,7 @@
 
 ---
 
-### Code/API/SDK part of the documentation
+#### Code/API/SDK part of the documentation
 
 </br>
 
@@ -77,7 +113,7 @@
 
 ---
 
-### Use Git Submodules to link source code together with Wiki content and DocFX pimped source code XML Comments
+#### Use Git Submodules to link source code together with Wiki content and DocFX pimped source code XML Comments
 
 - realized as sub modules
 - checkout of the Wiki repo below `doc` folder 
@@ -87,16 +123,16 @@
 
 ---
 
-### Provide complete XML Comments
+#### Provide complete XML Comments
 
 - completely documented all public and protected interfaces
 - re-introduced GhostDoc in toolset
 
 ![](./images/2019-09.Documentation.01.png)
 
-***
+---
 
-## Slack
+### Slack
 
 - cloud-based set of team collaboration software tools and online services
 - Slack = "Searchable Log of All Conversation and Knowledge."
@@ -111,13 +147,13 @@
 
 ---
 
-### Contact with colleagues in AC
+#### Contact with colleagues in AC
 
 - alternative platform: **Mattermost**
 - on-prem possible & open source
 - not really adopted there
 
-### Road Ahead with O365
+#### Road Ahead with O365
 
 - under investigation, no rollout schedule
 - Teams as the successor of Skpye would be a perfect alternative
@@ -157,7 +193,7 @@
 ### Azure DevOps
 
 - SSO with Bosch BCN Account
-- Awareness-Createn/Knowledge-Transfer in ENG-teams
+- Awareness-Creation/Knowledge-Transfer in ENG-teams
 - Creation of an organization as a playground
     - incl. groups and members for/of ENG-teams
 
