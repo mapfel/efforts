@@ -138,3 +138,59 @@
 
 ## Evaluate UI Automation Frameworks
 
+***
+- id : TechTalk.2019-07
+
+## Tech Talk JUL 2019
+
+- Azure DevOps
+- Technical Wiki
+- XCopy-deployable Apps
+
+---
+
+### Azure DevOps
+
+- SSO with Bosch BCN Account
+- Awareness-Createn/Knowledge-Transfer in ENG-teams
+- Creation of an organization as a playground
+    - incl. groups and members for/of ENG-teams
+
+![](./images/2019-07.TechTalk.02.png)
+
+---
+
+### Technical Wiki
+
+- SharePoint Wiki is not a Wiki
+- a lot of limitations
+    - no real history for easily scanning for changes
+    - no offline capabilities
+    - bundling belonging things into "atomic" commits not possible
+    - allows too much individual formatting
+    - ?: What about versioning?
+        - With conflict management?
+        - With diffing?
+    - ?: no commit message?
+
+---
+
+### Start with content
+
+- Prepared a show case for a [tWiki](https://dev.azure.com/pas4/Applications/_wiki/wikis/Applications.wiki?pagePath=%2FREADME)
+- XCopy-deployable Apps
+    - Deployment Guidelines
+    - Details about some tools
+- IDE and Plgins
+    - Visual Studio IG
+    - ReSharper
+- Git
+    - Introduction
+    - Workflows
+    - Best Practices: Branching
+    - Best Practices: Commits
+    - Troubleshooting
+
+---
+
+![](./images/2019-07.TechTalk.01.png)
