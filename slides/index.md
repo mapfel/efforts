@@ -121,7 +121,7 @@
 ***
 - id : DocFx.2019-09
 
-### DocFX
+## DocFX
 
 - Microsoft developed documentation tool
 - open source successor of SHFB for multiple platforms
@@ -133,7 +133,7 @@
 
 ---
 
-#### Mix XML Comment with Wiki
+### Mix XML Comment with Wiki
 
 - currently the XML Comments are merged together with Wiki content
 - it is done inside the `docfx.json` file
@@ -142,7 +142,7 @@
 
 ---
 
-#### Host the DocFX output via GitHub Pages
+### Host the DocFX output via GitHub Pages
 
 - used the `apm1grb` account to host the **DocFX** output 
 - you can find here: [https://apm1grb.github.io/](https://apm1grb.github.io/)
@@ -154,7 +154,7 @@
 
 ---
 
-#### Wiki part of the documentation
+### Wiki part of the documentation
 
 </br>
 
@@ -162,7 +162,7 @@
 
 ---
 
-#### Code/API/SDK part of the documentation
+### Code/API/SDK part of the documentation
 
 </br>
 
@@ -170,17 +170,45 @@
 
 ---
 
-#### Use Git Submodules to link source code together with Wiki content and DocFX pimped source code XML Comments
+### Improvement: Split into SDK & API Documentation and aggregate topics
 
-- realized as sub modules
-- checkout of the Wiki repo below `doc` folder 
-- checkout of "`_site`-repo" below `doc` folder 
-- needs awareness about workflows  
-  (when the pull Wiki and to push "`_site`-repo")
+</br>
+
+![](./images/2019-09.Documentation.06.png)
 
 ---
 
-#### Provide complete XML Comments
+### Usage of Git Submodules 
+
+- ties repository of source code (with its XML Comments) together with belonging repositories:
+    - Wiki content
+    - DocFX generated comprehensive documentation  
+      (as static web sites to host on [GitHub Pages](https://apm1grb.github.io) or Azure WebSites)
+- needs awareness about workflows  
+  (when to pull Wiki and to push "`_site`-repo" (GitHub Pages))
+
+---
+
+### Command examples
+
+- checkout of the Wiki repo below `doc` folder
+
+        git submodule add 
+          git@ssh.dev.azure.com:v3/<organization>/<project>/<repository>.wiki doc/wiki
+
+- checkout of "`_site`-repo" below `doc` folder
+
+        git submodule add
+          git@<alias>:<username>/<username>.github.io.git doc/_site
+
+- cloning with all submodules
+
+        git clone 
+          git@ssh.dev.azure.com:v3/<organization>/<project>/<repository> --recursive
+
+---
+
+### Provide complete XML Comments
 
 - completely documented all public and protected interfaces
 - re-introduced GhostDoc in toolset
