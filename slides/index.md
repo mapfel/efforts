@@ -23,7 +23,16 @@
 
 ' find unicode arrows [here](http://xahlee.info/comp/unicode_arrows.html)
 
+---
 
+## Table of contents
+
+- Organizational
+- New Tools
+- DocFX
+- BVMS UI Automation Wiki
+- Evaluate UI Automation Frameworks
+- Tech Talk JUL 2019
 
 ***
 - id : Organizational
@@ -226,6 +235,61 @@
 
 
 ***
+- id : Libs.2019-08
+
+## (Additionally) Evaluated Libraries and Frameworks
+
+- Unit-Testing: xUnit, FluentAssertitions, Shouldly
+- Office Connectivity: F#, ExcelProvider
+
+---
+
+### xUnit
+
+- benefits of **xUnit** compared to **NUnit**
+    - .NET Core "default" testing FW
+    - felt to be more logical/intuitive and aligned with C# language  
+      `ctor` vs. `[SetUp]` attribute
+    - `InlineData` and `MemberData` to parametrize unit test?
+
+> [What are the best unit testing frameworks for .NET?](https://www.slant.co/topics/543/versus/~xunit-net_vs_nunit_vs_mstest)
+
+---
+
+### FluentAssertion & Shouldly
+
+- started with **Shouldly** (used in PluralSight course)
+- switched later to **FluentAssertions** (seen as better alternative)
+
+![](./images/2019-08.FluentAssertions.01.png)
+
+![](./images/2019-08.FluentAssertions.02.png)
+![](./images/2019-08.FluentAssertions.03.png)
+
+---
+
+### F#, ExcelProvider
+
+> Challenge:  
+  "use Excel sheets to create a BVMS configuration"
+
+- F# type provider for Excel
+    - allows easiest access of sheet content
+    - creates strongly-typed type out of the sheets data
+
+</br>
+
+```fsharp
+let decodersSheet = "Decoders"
+type DataTypesTest = ExcelFile< @"..\..\..\cfg\Configuration.xlsx", decodersSheet>
+let CreateListOfDecoders fromFile =
+    let file = new DataTypesTest(fromFile, decodersSheet)
+    file.Data 
+        |> Seq.map (fun row -> DecoderFactory.CreateDecoder 
+            (row.Name, row.DecoderType, row.``IP-Adresse``)
+```
+
+***
 - id : Wiki.2019-09
 
 ## BVMS UI Automation Wiki
@@ -330,6 +394,8 @@
         - With conflict management?
         - With diffing?
     - ?: no commit message?
+
+> [Wiki-Presentation](http://mapfel.github.io/wiki-presentation)
 
 ---
 
