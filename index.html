@@ -46,10 +46,14 @@
 </head>
 <body>
     <div class="reveal">
-        
+        <div class="tip" id="fs1">namespace Microsoft.FSharp.Data</div>
+<div class="tip" id="fs2">module Seq<br /><br />from Microsoft.FSharp.Collections</div>
+<div class="tip" id="fs3">val map : mapping:(&#39;T -&gt; &#39;U) -&gt; source:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;U&gt;<br /><br />Full name: Microsoft.FSharp.Collections.Seq.map</div>
+
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
             <section >
+<section >
 <h2>Efforts and Tracking</h2>
 <h3>How to use this Slide</h3>
 <ul>
@@ -75,6 +79,18 @@ other keys
 <aside class="notes">
 find unicode arrows [here](http://xahlee.info/comp/unicode_arrows.html)<br/>
 </aside>
+</section>
+<section >
+<h2>Table of contents</h2>
+<ul>
+<li>Organizational</li>
+<li>New Tools</li>
+<li>DocFX</li>
+<li>BVMS UI Automation Wiki</li>
+<li>Evaluate UI Automation Frameworks</li>
+<li>Tech Talk JUL 2019</li>
+</ul>
+</section>
 </section>
 <section >
 <section id="Organizational">
@@ -298,6 +314,79 @@ needs awareness about workflows<br />
 </section>
 </section>
 <section >
+<section id="Libs.2019-08">
+<h2>(Additionally) Evaluated Libraries and Frameworks</h2>
+<ul>
+<li>Unit-Testing: xUnit, FluentAssertitions, Shouldly</li>
+<li>Office Connectivity: F#, ExcelProvider</li>
+</ul>
+</section>
+<section >
+<h3>xUnit</h3>
+<ul>
+<li>
+benefits of <strong>xUnit</strong> compared to <strong>NUnit</strong>
+<ul>
+<li>.NET Core "default" testing FW</li>
+<li>
+felt to be more logical/intuitive and aligned with C# language<br />
+<code>ctor</code> vs. <code>[SetUp]</code> attribute
+</li>
+<li><code>InlineData</code> and <code>MemberData</code> to parametrize unit test?</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><a href="https://www.slant.co/topics/543/versus/~xunit-net_vs_nunit_vs_mstest">What are the best unit testing frameworks for .NET?</a></p>
+</blockquote>
+</section>
+<section >
+<h3>FluentAssertion &amp; Shouldly</h3>
+<ul>
+<li>started with <strong>Shouldly</strong> (used in PluralSight course)</li>
+<li>switched later to <strong>FluentAssertions</strong> (seen as better alternative)</li>
+</ul>
+<p><img src="./images/2019-08.FluentAssertions.01.png" alt="" /></p>
+<p><img src="./images/2019-08.FluentAssertions.02.png" alt="" />
+<img src="./images/2019-08.FluentAssertions.03.png" alt="" /></p>
+</section>
+<section >
+<h3>F#, ExcelProvider</h3>
+<blockquote>
+<p>Challenge:<br />
+"use Excel sheets to create a BVMS configuration"</p>
+</blockquote>
+<ul>
+<li>
+F# type provider for Excel
+<ul>
+<li>allows easiest access of sheet content</li>
+<li>creates strongly-typed type out of the sheets data</li>
+</ul>
+</li>
+</ul>
+</br>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
+<span class="l">7: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span class="i">decodersSheet</span> <span class="o">=</span> <span class="s">&quot;Decoders&quot;</span>
+<span class="k">type</span> <span class="i">DataTypesTest</span> <span class="o">=</span> <span class="i">ExcelFile</span><span class="o">&lt;</span> <span class="s">@&quot;..\..\..\cfg\Configuration.xlsx&quot;</span>, <span class="i">decodersSheet</span><span class="o">&gt;</span>
+<span class="k">let</span> <span class="i">CreateListOfDecoders</span> <span class="i">fromFile</span> <span class="o">=</span>
+    <span class="k">let</span> <span class="i">file</span> <span class="o">=</span> <span class="k">new</span> <span class="i">DataTypesTest</span>(<span class="i">fromFile</span>, <span class="i">decodersSheet</span>)
+    <span class="i">file</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Data</span> 
+        <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">map</span> (<span class="k">fun</span> <span class="i">row</span> <span class="k">-&gt;</span> <span class="i">DecoderFactory</span><span class="o">.</span><span class="i">CreateDecoder</span> 
+            (<span class="i">row</span><span class="o">.</span><span class="i">Name</span>, <span class="i">row</span><span class="o">.</span><span class="i">DecoderType</span>, <span class="i">row</span><span class="o">.</span><span class="i">``IP-Adresse``</span>)
+</code></pre></td>
+</tr>
+</table>
+</section>
+</section>
+<section >
 <section id="Wiki.2019-09">
 <h2>BVMS UI Automation Wiki</h2>
 <ul>
@@ -428,6 +517,9 @@ a lot of limitations
 </ul>
 </li>
 </ul>
+<blockquote>
+<p><a href="http://mapfel.github.io/wiki-presentation">Wiki-Presentation</a></p>
+</blockquote>
 </section>
 <section >
 <h3>Start with content</h3>
