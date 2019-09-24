@@ -184,7 +184,7 @@ redirecting of the sub domain was made in the past<br />
 </section>
 <section >
 <section id="DocFx.2019-09">
-<h3>DocFX</h3>
+<h2>DocFX</h2>
 <ul>
 <li>Microsoft developed documentation tool</li>
 <li>open source successor of SHFB for multiple platforms</li>
@@ -199,7 +199,7 @@ allows easily mix code documentation with additional content<br />
 </blockquote>
 </section>
 <section >
-<h4>Mix XML Comment with Wiki</h4>
+<h3>Mix XML Comment with Wiki</h3>
 <ul>
 <li>currently the XML Comments are merged together with Wiki content</li>
 <li>it is done inside the <code>docfx.json</code> file</li>
@@ -207,7 +207,7 @@ allows easily mix code documentation with additional content<br />
 <p><img src="./images/2019-09.Documentation.03.png" alt="" /></p>
 </section>
 <section >
-<h4>Host the DocFX output via GitHub Pages</h4>
+<h3>Host the DocFX output via GitHub Pages</h3>
 <ul>
 <li>used the <code>apm1grb</code> account to host the <strong>DocFX</strong> output</li>
 <li>you can find here: <a href="https://apm1grb.github.io/"><a href="https://apm1grb.github.io/">https://apm1grb.github.io/</a></a></li>
@@ -217,29 +217,79 @@ allows easily mix code documentation with additional content<br />
 <p><img src="./images/2019-09.Documentation.02.png" alt="" /></p>
 </section>
 <section >
-<h4>Wiki part of the documentation</h4>
+<h3>Wiki part of the documentation</h3>
 </br>
 <p><img src="./images/2019-09.Documentation.04.png" alt="" /></p>
 </section>
 <section >
-<h4>Code/API/SDK part of the documentation</h4>
+<h3>Code/API/SDK part of the documentation</h3>
 </br>
 <p><img src="./images/2019-09.Documentation.05.png" alt="" /></p>
 </section>
 <section >
-<h4>Use Git Submodules to link source code together with Wiki content and DocFX pimped source code XML Comments</h4>
+<h3>Improvement: Split into SDK &amp; API Documentation and aggregate topics</h3>
+</br>
+<p><img src="./images/2019-09.Documentation.06.png" alt="" /></p>
+</section>
+<section >
+<h3>Usage of Git Submodules</h3>
 <ul>
-<li>realized as sub modules</li>
-<li>checkout of the Wiki repo below <code>doc</code> folder</li>
-<li>checkout of "<code>_site</code>-repo" below <code>doc</code> folder</li>
+<li>
+ties repository of source code (with its XML Comments) together with belonging repositories:
+<ul>
+<li>Wiki content</li>
+<li>
+DocFX generated comprehensive documentation<br />
+(as static web sites to host on <a href="https://apm1grb.github.io">GitHub Pages</a> or Azure WebSites)
+</li>
+</ul>
+</li>
 <li>
 needs awareness about workflows<br />
-(when the pull Wiki and to push "<code>_site</code>-repo")
+(when to pull Wiki and to push "<code>_site</code>-repo" (GitHub Pages))
 </li>
 </ul>
 </section>
 <section >
-<h4>Provide complete XML Comments</h4>
+<h3>Command examples</h3>
+<ul>
+<li>
+<p>checkout of the Wiki repo below <code>doc</code> folder</p>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp">  <span class="i">git</span> <span class="i">submodule</span> <span class="i">add</span> 
+    <span class="i">git</span><span class="o">@</span><span class="i">ssh</span><span class="o">.</span><span class="i">dev</span><span class="o">.</span><span class="i">azure</span><span class="o">.</span><span class="i">com</span><span class="o">:</span><span class="i">v3</span><span class="o">/&lt;</span><span class="i">organization</span><span class="o">&gt;</span><span class="o">/&lt;</span><span class="i">project</span><span class="o">&gt;</span><span class="o">/&lt;</span><span class="i">repository</span><span class="o">&gt;</span><span class="o">.</span><span class="i">wiki</span> <span class="i">doc</span><span class="o">/</span><span class="i">wiki</span>
+</code></pre></td>
+</tr>
+</table>
+</li>
+<li>
+<p>checkout of "<code>_site</code>-repo" below <code>doc</code> folder</p>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp">  <span class="i">git</span> <span class="i">submodule</span> <span class="i">add</span>
+    <span class="i">git</span><span class="o">@&lt;</span><span class="i">alias</span><span class="o">&gt;</span><span class="i">username</span><span class="o">&gt;</span><span class="o">/&lt;</span><span class="i">username</span><span class="o">&gt;</span><span class="o">.</span><span class="i">github</span><span class="o">.</span><span class="i">io</span><span class="o">.</span><span class="i">git</span> <span class="i">doc</span><span class="o">/</span><span class="i">_site</span>
+</code></pre></td>
+</tr>
+</table>
+</li>
+<li>
+<p>cloning with all submodules</p>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp">  <span class="i">git</span> <span class="i">clone</span> 
+    <span class="i">git</span><span class="o">@</span><span class="i">ssh</span><span class="o">.</span><span class="i">dev</span><span class="o">.</span><span class="i">azure</span><span class="o">.</span><span class="i">com</span><span class="o">:</span><span class="i">v3</span><span class="o">/&lt;</span><span class="i">organization</span><span class="o">&gt;</span><span class="o">/&lt;</span><span class="i">project</span><span class="o">&gt;</span><span class="o">/&lt;</span><span class="i">repository</span><span class="o">&gt;</span> <span class="o">--</span><span class="i">recursive</span>
+</code></pre></td>
+</tr>
+</table>
+</li>
+</ul>
+</section>
+<section >
+<h3>Provide complete XML Comments</h3>
 <ul>
 <li>completely documented all public and protected interfaces</li>
 <li>re-introduced GhostDoc in toolset</li>
@@ -262,8 +312,73 @@ needs awareness about workflows<br />
 <p><img src="./images/2019-09.Wiki.01.png" alt="" /></p>
 </section>
 </section>
+<section >
 <section id="EvaluationUiAutomation.2019-07">
 <h2>Evaluate UI Automation Frameworks</h2>
+<ul>
+<li>Coded UI</li>
+<li>TestStack White</li>
+<li>Appium</li>
+<li>FlaUI</li>
+</ul>
+</section>
+<section >
+<h3>Coded UI</h3>
+<ul>
+<li>
+deprecated (VS 2019 is the last supporting version)<br />
+see: <a href="https://devblogs.microsoft.com/devops/changes-to-coded-ui-test-in-visual-studio-2019/">Changes to Coded UI Test in Visual Studio 2019</a>
+</li>
+<li>
+too chatty by recording<br />
+--&gt; difficult to maintain
+</li>
+<li>toolset might be allow to capture details which other tools not able to do</li>
+</ul>
+</section>
+<section >
+<h3>TestStack White</h3>
+<ul>
+<li>abandoned (last commit in MAR 2017)</li>
+<li>
+maybe one of the 500 forks is still under development?
+<ul>
+<li>half a dozend have newer commits</li>
+<li>
+but first look doesn't show benefit<br />
+e.g. add Azure build capabilities
+</li>
+</ul>
+</li>
+<li>
+mix of UIA 2 (base for White) and 3 (sloppily added)
+<ul>
+<li>UIA 2: has limited capabilities  (e.g. Spinner)</li>
+<li>UAI 3: currently maintained by MS</li>
+</ul>
+</li>
+</ul>
+</section>
+<section >
+<h3>Appium</h3>
+<ul>
+<li>recommended from MS to use for Desktop App testing</li>
+<li>not possible to get it properly to run</li>
+<li>uses a web based host for interaction with user</li>
+</ul>
+</section>
+<section >
+<h3>FlaUI</h3>
+<ul>
+<li>based on ideas of TestStack White</li>
+<li>under maintenance, 12 contributors</li>
+<li>acceptable documentation, blog</li>
+<li>
+more concise and handy compared to White<br />
+nevertheless very similar regarding architecuture, principles,...
+</li>
+</ul>
+</section>
 </section>
 <section >
 <section id="TechTalk.2019-07">
