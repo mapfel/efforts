@@ -106,7 +106,7 @@
 
 ### Introduced FsReveal
 
-- to provide fancy presentations
+- to provide fancy web-based presentations
 - neutralized the tWiki presentation from the past
 - started to host that version at  
   [http://mapfel.github.io/wiki-presentation](http://mapfel.github.io/wiki-presentation)
@@ -260,7 +260,7 @@
 - deprecated (VS 2019 is the last supporting version)  
   see: [Changes to Coded UI Test in Visual Studio 2019](https://devblogs.microsoft.com/devops/changes-to-coded-ui-test-in-visual-studio-2019/)
 - too chatty by recording  
-  --> difficult to maintain
+  → difficult to maintain
 - toolset might be allow to capture details which other tools not able to do
 
 ---
@@ -294,7 +294,7 @@
 - more concise and handy compared to White  
   nevertheless very similar regarding architecuture, principles,...
 
-
+> We use that for further steps.
 
 ***
 - id : TechTalk.2019-07
