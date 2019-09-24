@@ -288,10 +288,10 @@
 
 ### FlaUI
 
-- based on ideas of TestStack White
+- based on ideas of **TestStack White**
 - under maintenance, 12 contributors
 - acceptable documentation, blog
-- more concise and handy compared to White  
+- more concise and handy compared to **TestStack White**  
   nevertheless very similar regarding architecuture, principles,...
 
 > We use that for further steps.
