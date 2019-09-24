@@ -231,10 +231,57 @@
 
 ![](./images/2019-09.Wiki.01.png)
 
+
 ***
 - id : EvaluationUiAutomation.2019-07
 
 ## Evaluate UI Automation Frameworks
+
+- Coded UI
+- TestStack White
+- Appium
+- FlaUI
+
+---
+
+### Coded UI
+
+- deprecated (VS 2019 is the last supporting version)  
+  see: [Changes to Coded UI Test in Visual Studio 2019](https://devblogs.microsoft.com/devops/changes-to-coded-ui-test-in-visual-studio-2019/)
+- too chatty by recording  
+  --> difficult to maintain
+- toolset might be allow to capture details which other tools not able to do
+
+---
+
+### TestStack White
+
+- abandoned (last commit in MAR 2017)
+- maybe one of the 500 forks is still under development?
+    - half a dozend have newer commits
+    - but first look doesn't show benefit  
+      e.g. add Azure build capabilities
+- mix of UIA 2 (base for White) and 3 (sloppily added)
+    - UIA 2: has limited capabilities  (e.g. Spinner)
+    - UAI 3: currently maintained by MS
+
+---
+
+### Appium
+
+- recommended from MS to use for Desktop App testing
+- not possible to get it properly to run
+- uses a web based host for interaction with user
+
+---
+
+### FlaUI
+
+- based on ideas of TestStack White
+- under maintenance, 12 contributors
+- acceptable documentation, blog
+- more concise and handy compared to White  
+  nevertheless very similar regarding architecuture, principles,...
 
 ***
 - id : TechTalk.2019-07
