@@ -4,6 +4,8 @@
 - theme : night
 - transition : default
 
+
+
 ***
 
 ## Efforts and Tracking
@@ -20,6 +22,8 @@
     - use `f` for full screen
 
 ' find unicode arrows [here](http://xahlee.info/comp/unicode_arrows.html)
+
+
 
 ***
 - id : Organizational
@@ -45,6 +49,8 @@
 
 - not for the public
 - see OneNote "Annoying Things"
+
+
 
 ***
 - id : NewTools
@@ -117,6 +123,8 @@
 ### DocFX
 
 > see dedicated main topic [DocFX](#/DocFx.2019-09)
+
+
 
 ***
 - id : DocFx.2019-09
@@ -215,6 +223,8 @@
 
 ![](./images/2019-09.Documentation.01.png)
 
+
+
 ***
 - id : Wiki.2019-09
 
@@ -230,6 +240,7 @@
 ### Start with some basic knowledge
 
 ![](./images/2019-09.Wiki.01.png)
+
 
 
 ***
@@ -282,6 +293,8 @@
 - acceptable documentation, blog
 - more concise and handy compared to White  
   nevertheless very similar regarding architecuture, principles,...
+
+
 
 ***
 - id : TechTalk.2019-07
