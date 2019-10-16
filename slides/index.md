@@ -18,6 +18,7 @@
     - use ⬅ and ➡ to navigate between main topics
     - use ⬆ and ⬇ to navigate between sub topics
 - other keys
+    - use `Space` to present in order
     - use `ESC` to see the slide-map
     - use `f` for full screen
 
@@ -28,6 +29,7 @@
 ## Table of contents
 
 - Organizational
+- Techniques & Frameworks
 - New Tools
 - DocFX
 - BVMS UI Automation Wiki
@@ -59,6 +61,25 @@
 - not for the public
 - see OneNote "Annoying Things"
 
+***
+- id : Techniques-Frameworks
+
+## Techniques & Frameworks
+
+- **PostSharp**
+
+---
+
+### PostSharp
+
+- get rid of primitive obsessions  
+  e.g. `int` datatypes with shrinked value range
+
+```cs
+[Range(1, 7)]
+public int SanityCheckPeriod { get; internal set; }
+// sanity check allows only values between 1 and 7
+```
 
 
 ***
@@ -132,6 +153,14 @@
 ### DocFX
 
 > see dedicated main topic [DocFX](#/DocFx.2019-09)
+
+---
+
+### Azure DevOps YAML Build Pipelines
+
+- created `yaml`-based build pipeline
+
+![](./images/2019-09.Azure.BuildPipeline.01.png)
 
 
 
@@ -237,10 +266,11 @@
 ***
 - id : Libs.2019-08
 
-## (Additionally) Evaluated Libraries and Frameworks
+## (Additionally) Evaluated Libraries, Frameworks, Techniques
 
 - Unit-Testing: xUnit, FluentAssertitions, Shouldly
 - Office Connectivity: F#, ExcelProvider
+- Azure DevOps YAML Build Pipelines
 
 ---
 
@@ -251,6 +281,8 @@
     - felt to be more logical/intuitive and aligned with C# language  
       `ctor` vs. `[SetUp]` attribute
     - `InlineData` and `MemberData` to parametrize unit test?
+
+![](./images/2019-08.xUnit.01.png)
 
 > [What are the best unit testing frameworks for .NET?](https://www.slant.co/topics/543/versus/~xunit-net_vs_nunit_vs_mstest)
 
@@ -288,6 +320,8 @@ let CreateListOfDecoders fromFile =
         |> Seq.map (fun row -> DecoderFactory.CreateDecoder 
             (row.Name, row.DecoderType, row.``IP-Adresse``)
 ```
+
+
 
 ***
 - id : Wiki.2019-09
@@ -360,6 +394,8 @@ let CreateListOfDecoders fromFile =
 
 > We use that for further steps.
 
+
+
 ***
 - id : TechTalk.2019-07
 
@@ -418,3 +454,7 @@ let CreateListOfDecoders fromFile =
 ---
 
 ![](./images/2019-07.TechTalk.01.png)
+
+***
+
+![](./images/TheEnd.jpg)
