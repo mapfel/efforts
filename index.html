@@ -85,6 +85,7 @@ find unicode arrows [here](http://xahlee.info/comp/unicode_arrows.html)<br/>
 <h2>Table of contents</h2>
 <ul>
 <li>Organizational</li>
+<li>Techniques &amp; Frameworks</li>
 <li>New Tools</li>
 <li>DocFX</li>
 <li>BVMS UI Automation Wiki</li>
@@ -121,6 +122,31 @@ Road ahead and decicion about future of VCS?
 <li>not for the public</li>
 <li>see OneNote "Annoying Things"</li>
 </ul>
+</section>
+</section>
+<section >
+<section id="Techniques-Frameworks">
+<h2>Techniques &amp; Frameworks</h2>
+<ul>
+<li><strong>PostSharp</strong></li>
+</ul>
+</section>
+<section >
+<h3>PostSharp</h3>
+<ul>
+<li>
+get rid of primitive obsessions<br />
+e.g. <code>int</code> datatypes with shrinked value range
+</li>
+</ul>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="cs">[Range(<span class="n">1</span>, <span class="n">7</span>)]
+<span class="k">public</span> <span class="k">int</span> SanityCheckPeriod { get; <span class="k">internal</span> set; }
+<span class="c">// sanity check allows only values between 1 and 7</span>
+</code></pre></td></tr></table>
 </section>
 </section>
 <section >
