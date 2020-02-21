@@ -49,7 +49,7 @@
 ### ToDos and open tasks
 
 - How to spread knowledge about XCopy-deployable tools?
-- Road ahead and decicion about future of VCS?
+- Road ahead and decision about future of VCS?
     - Transition to Git
     - Recommendation for new projects/repos
 - Road ahead with Wiki?
@@ -66,6 +66,8 @@
 
 ## Techniques & Frameworks
 
+- Presentations about Dependency/Package Management
+- **Paket**
 - **PostSharp**
 
 ---
@@ -80,6 +82,17 @@
 public int SanityCheckPeriod { get; internal set; }
 // sanity check allows only values between 1 and 7
 ```
+
+---
+
+### Dependency/Package Management
+
+- presentations for Architecture Group
+
+  - [NuGet](http://bit.ly/ma-nuget)
+  - [Paket](http://bit.ly/ma-paket)
+
+- migrated from **NuGet** to **Paket**
 
 
 ***
@@ -129,7 +142,7 @@ public int SanityCheckPeriod { get; internal set; }
 
 #### Road Ahead with O365
 
-- under investigation, no rollout schedule
+- under investigation, official rollout?; not accessible from E-Net
 - Teams as the successor of Skpye would be a perfect alternative
 
 ---
@@ -158,11 +171,46 @@ public int SanityCheckPeriod { get; internal set; }
 
 ### Azure DevOps YAML Build Pipelines
 
+
+> see dedicated main topic [Azure DevOps](#/AzureDevops.2020-02)
+
+
+***
+- id : AzureDevops.2020-02
+
+## Azure DevOps
+
+- successor/evolution of Visual Studio Team Services
+- Repositories, Pipelines, Artifacts, Boards, Test Management
+- Cloud and on-premises
+
+---
+
+### Virtual Infrastructure
+
+- step into the VS Enterprise benefits
+- BVMS provisioning for a VMs
+
+---
+
+### Build Pipeline based on yaml
+
 - created `yaml`-based build pipeline
+- pipeline as code, infrastructure as code
 
 ![](./images/2019-09.Azure.BuildPipeline.01.png)
 
+---
 
+### Release Pipeline (destination: VM)
+
+- installation & configuration of test agents
+- deploy BVMS UI Automation assets
+- run the UI tests in interactive mode
+- --> gives devs more freedom
+
+
+![](./images/2020-02.Azure.ReleasePipeline.01.png)
 
 ***
 - id : DocFx.2019-09
