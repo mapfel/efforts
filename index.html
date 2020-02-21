@@ -137,24 +137,32 @@ some keywords
 </ul>
 </section>
 </section>
+<section >
 <section id="techniques">
 <h1>Techniques</h1>
 </section>
 <section >
-<section >
-<h2>Overview</h2>
+<h2>Techniques Overview</h2>
 <ul>
-<li>API Design</li>
-<li>Fluent Interface (ensure an easy UX)</li>
-<li>Dependency Management (1st class citizen)</li>
+<li><a href="#/techniques.api">API Design</a></li>
+<li><a href="#/techniques.fi">Fluent Interface</a></li>
+<li><a href="#/techniques.dp">Dependency Management</a></li>
+<li><a href="#/techniques.ba">Build Automation</a></li>
 </ul>
 </section>
-<section >
+</section>
+<section id="techniques.api">
 <h2>API Design</h2>
 <ul>
 <li>abstract into view of customer</li>
 <li>carve out distinction between SDK and API</li>
 <li>structure DevTree appropriate</li>
+</ul>
+</section>
+<section id="techniques.fi">
+<h2>Fluent Interface</h2>
+<ul>
+<li>ensure an easy UX</li>
 <li>
 rethink fluent API
 
@@ -167,8 +175,54 @@ rethink fluent API
 </li>
 </ul>
 </section>
+<section id="techniques.dp">
+<h2>Dependency/Package Management</h2>
+<ul>
+<li>1st class citizen in architecture of big systems</li>
+<li>
+<p>presentations about Dependency/Package Management Architecture Group</p>
+<ul>
+<li><p><a href="http://bit.ly/ma-nuget">NuGet</a></p></li>
+<li><p><a href="http://bit.ly/ma-paket">Paket</a></p></li>
+</ul>
+</li>
+<li><p>migrated from <strong>NuGet</strong> to <strong>Paket</strong></p></li>
+</ul>
 </section>
-<section id="techniques">
+<section >
+<section id="techniques.ba">
+<h2>Build Automation</h2>
+<ul>
+<li>Pipeline as Code</li>
+<li>F# Make (FAKE)</li>
+</ul>
+<h2>Pipeline as Code</h2>
+<ul>
+<li>use <code>yaml</code></li>
+</ul>
+</section>
+<section >
+<h3></h3>
+</section>
+</section>
+<section >
+<section id="tools">
+<h1>Tools</h1>
+</section>
+<section >
+<h2>Tools Overview</h2>
+<ul>
+<li>Fake</li>
+<li>LINQPad</li>
+<li>ReSharper</li>
+<li></li>
+</ul>
+</section>
+<section >
+<h3>Fake</h3>
+</section>
+</section>
+<section id="frameworks">
 <h1>Frameworks</h1>
 </section>
 <section >
@@ -196,19 +250,6 @@ e.g. <code>int</code> data types with restricted value range
 <span class="k">public</span> <span class="k">int</span> SanityCheckPeriod { get; <span class="k">internal</span> set; }
 <span class="c">// sanity check allows only values between 1 and 7</span>
 </code></pre></td></tr></table>
-</section>
-<section >
-<h3>Dependency/Package Management</h3>
-<ul>
-<li>
-<p>presentations for Architecture Group</p>
-<ul>
-<li><p><a href="http://bit.ly/ma-nuget">NuGet</a></p></li>
-<li><p><a href="http://bit.ly/ma-paket">Paket</a></p></li>
-</ul>
-</li>
-<li><p>migrated from <strong>NuGet</strong> to <strong>Paket</strong></p></li>
-</ul>
 </section>
 </section>
 <section >
