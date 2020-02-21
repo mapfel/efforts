@@ -135,20 +135,27 @@ Road ahead and decision about future of VCS?
 </ul>
 </section>
 <section >
+<section >
 <h2>Annoying things</h2>
 <ul>
 <li>not for the public (see OneNote "Annoying Things")</li>
-<li>
-some keywords
+<li>some keywords</li>
+</ul>
+</section>
+<section >
+<h3>Passion</h3>
 <ul>
 <li>state-of-the-art workflows, tool sets</li>
 <li>missing productivity (tools, shortcuts)</li>
 <li>collaboration culture (slack, wiki)</li>
+</ul>
+<h3>Mustiness</h3>
+<ul>
 <li>agile principles (pair coding, reviews)</li>
 <li>prohibited resources, file transfers</li>
+<li>collaboration toolset</li>
 </ul>
-</li>
-</ul>
+</section>
 </section>
 <section >
 <section id="techniques">
@@ -259,8 +266,9 @@ rethink fluent API
 <ul>
 <li>AOP with PostSharp</li>
 <li>Fake</li>
-<li>LINQPad</li>
+<li><a href="#/tools.docfx">DocFX</a></li>
 <li>ReSharper</li>
+<li><a href="#/tools.other">Other Tools</a></li>
 </ul>
 </section>
 <section >
@@ -282,124 +290,7 @@ e.g. <code>int</code> data types with restricted value range
 </section>
 </section>
 <section >
-<section id="NewTools">
-<h2>New tools, techniques</h2>
-<ul>
-<li><strong>Slack</strong>: seamless and productive messaging and co-working</li>
-<li><strong>FsReveal</strong>: fancy presentations with versioning for devs</li>
-<li><strong>DocFX</strong>: documentation</li>
-<li><strong>Git</strong>: versioning</li>
-<li><strong>Markdown</strong>: productive markup language for Wikis and other documentations</li>
-<li><strong>Azure DevOps</strong>: ALM platform with Wiki, pipelines, ...</li>
-</ul>
-</section>
-<section >
-<h3>Slack</h3>
-<ul>
-<li>cloud-based set of team collaboration software tools and online services</li>
-<li>Slack = "Searchable Log of All Conversation and Knowledge."</li>
-<li>most famous platform</li>
-</ul>
-</section>
-<section >
-<h4>Status Quo</h4>
-<ul>
-<li>created a workspace, prepared some channels</li>
-<li>invited SM, FM</li>
-</ul>
-<p><img src="./images/2019-09.Tools.Slack.01.png" alt="" /></p>
-</section>
-<section >
-<h3>Alternatives</h3>
-<br/>
-<br/>
-<h4>Contact with colleagues in AC</h4>
-<ul>
-<li>alternative platform: <strong>Mattermost</strong></li>
-<li>on-prem possible &amp; open source</li>
-<li>not really adopted there</li>
-</ul>
-<br/>
-<br/>
-<h4>Road Ahead with O365</h4>
-<ul>
-<li>under investigation, official rollout?; not accessible from E-Net</li>
-<li>Teams as the successor of Skpye would be a perfect alternative</li>
-</ul>
-</section>
-<section >
-<h3>Introduced FsReveal</h3>
-<ul>
-<li>to provide fancy web-based presentations</li>
-<li>neutralized the tWiki presentation from the past</li>
-<li>
-started to host that version at<br />
-<a href="http://mapfel.github.io/wiki-presentation"><a href="http://mapfel.github.io/wiki-presentation">http://mapfel.github.io/wiki-presentation</a></a>
-</li>
-<li>
-which is the same as<br />
-<a href="http://blog.apfel.space/wiki-presentation/"><a href="http://blog.apfel.space/wiki-presentation/">http://blog.apfel.space/wiki-presentation/</a></a>
-</li>
-<li>it can be used as the template for company specific presentations</li>
-<li>
-redirecting of the sub domain was made in the past<br />
-→ have to figure out how
-</li>
-</ul>
-<blockquote>
-<p><a href="http://fsprojects.github.io/FsReveal/">Homepage FsReveal</a></p>
-</blockquote>
-</section>
-<section >
-<h3>DocFX</h3>
-<blockquote>
-<p>see dedicated main topic <a href="#/DocFx.2019-09">DocFX</a></p>
-</blockquote>
-</section>
-<section >
-<h3>Azure DevOps YAML Build Pipelines</h3>
-<blockquote>
-<p>see dedicated main topic <a href="#/AzureDevops.2020-02">Azure DevOps</a></p>
-</blockquote>
-</section>
-</section>
-<section >
-<section id="AzureDevops.2020-02">
-<h2>Azure DevOps</h2>
-<ul>
-<li>successor/evolution of Visual Studio Team Services</li>
-<li>Repositories, Pipelines, Artifacts, Boards, Test Management</li>
-<li>Cloud and on-premises</li>
-</ul>
-</section>
-<section >
-<h3>Virtual Infrastructure</h3>
-<ul>
-<li>step into the VS Enterprise benefits</li>
-<li>BVMS provisioning for a VMs</li>
-</ul>
-</section>
-<section >
-<h3>Build Pipeline based on yaml</h3>
-<ul>
-<li>created <code>yaml</code>-based build pipeline</li>
-<li>pipeline as code, infrastructure as code</li>
-</ul>
-<p><img src="./images/2019-09.Azure.BuildPipeline.01.png" alt="" /></p>
-</section>
-<section >
-<h3>Release Pipeline (destination: VM)</h3>
-<ul>
-<li>installation &amp; configuration of test agents</li>
-<li>deploy BVMS UI Automation assets</li>
-<li>run the UI tests in interactive mode</li>
-<li>--&gt; gives devs more freedom</li>
-</ul>
-<p><img src="./images/2020-02.Azure.ReleasePipeline.01.png" alt="" /></p>
-</section>
-</section>
-<section >
-<section id="DocFx.2019-09">
+<section id="tools.docfx">
 <h2>DocFX</h2>
 <ul>
 <li>Microsoft developed documentation tool</li>
@@ -514,16 +405,109 @@ needs awareness about workflows<br />
 </section>
 </section>
 <section >
-<section id="Libs.2019-08">
-<h2>(Additionally) Evaluated Libraries, Frameworks, Techniques</h2>
+<section id="tools.other">
+<h1>Other tools</h1>
+</section>
+<section >
+<h2>Table of Contents</h2>
 <ul>
-<li>Unit-Testing: xUnit, FluentAssertitions, Shouldly</li>
-<li>Office Connectivity: F#, ExcelProvider</li>
-<li>Azure DevOps YAML Build Pipelines</li>
+<li><strong>Slack</strong>: seamless and productive messaging and co-working</li>
+<li><strong>FsReveal</strong>: fancy presentations with versioning for devs</li>
+<li><strong>LINQPad</strong>: Lightweight C# IDE</li>
+<li><strong>Git</strong>: versioning</li>
+<li><strong>Markdown</strong>: productive markup language for Wikis and other documentations</li>
+</ul>
+</section>
+</section>
+<section >
+<section >
+<h2>Slack</h2>
+<ul>
+<li>cloud-based set of team collaboration software tools and online services</li>
+<li>Slack = "Searchable Log of All Conversation and Knowledge."</li>
+<li>most famous platform</li>
 </ul>
 </section>
 <section >
-<h3>xUnit</h3>
+<h3>Status Quo</h3>
+<ul>
+<li>created a workspace, prepared some channels</li>
+<li>invited SM, FM</li>
+</ul>
+<p><img src="./images/2019-09.Tools.Slack.01.png" alt="" /></p>
+</section>
+<section >
+<h3>Alternatives</h3>
+<br/>
+<br/>
+<h4>Contact with colleagues in AC</h4>
+<ul>
+<li>alternative platform: <strong>Mattermost</strong></li>
+<li>on-prem possible &amp; open source</li>
+<li>not really adopted there</li>
+</ul>
+<br/>
+<br/>
+<h4>Road Ahead with O365</h4>
+<ul>
+<li>under investigation, official rollout?; not accessible from E-Net</li>
+<li>Teams as the successor of Skpye would be a perfect alternative</li>
+</ul>
+</section>
+<section >
+<h3>Introduced FsReveal</h3>
+<ul>
+<li>to provide fancy web-based presentations</li>
+<li>neutralized the tWiki presentation from the past</li>
+<li>
+started to host that version at<br />
+<a href="http://mapfel.github.io/wiki-presentation"><a href="http://mapfel.github.io/wiki-presentation">http://mapfel.github.io/wiki-presentation</a></a>
+</li>
+<li>
+which is the same as<br />
+<a href="http://blog.apfel.space/wiki-presentation/"><a href="http://blog.apfel.space/wiki-presentation/">http://blog.apfel.space/wiki-presentation/</a></a>
+</li>
+<li>it can be used as the template for company specific presentations</li>
+<li>
+redirecting of the sub domain was made in the past<br />
+→ have to figure out how
+</li>
+</ul>
+<blockquote>
+<p><a href="http://fsprojects.github.io/FsReveal/">Homepage FsReveal</a></p>
+</blockquote>
+</section>
+</section>
+<section >
+<section id="Wiki.2019-09">
+<h2>BVMS UI Automation Wiki</h2>
+<ul>
+<li>started to create a project Wiki</li>
+<li>based on Azure DevOps (Git &amp; Markdown)</li>
+<li>capture knowledge about the BVMS UI Automation</li>
+<li>provide SMM, SDS,...</li>
+</ul>
+</section>
+<section >
+<h3>Start with some basic knowledge</h3>
+<p><img src="./images/2019-09.Wiki.01.png" alt="" /></p>
+</section>
+</section>
+<section >
+<section id="languages">
+<h1>Languages and Frameworks</h1>
+</section>
+<section >
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#/languages.xunit">xUnit</a></li>
+<li>[FluentAssertions, Shouldly}(#/languages.fa)</li>
+<li><a href="languages.fs">F#</a></li>
+</ul>
+</section>
+</section>
+<section id="languages.xunit">
+<h2>xUnit</h2>
 <ul>
 <li>
 benefits of <strong>xUnit</strong> compared to <strong>NUnit</strong>
@@ -542,8 +526,8 @@ felt to be more logical/intuitive and aligned with C# language<br />
 <p><a href="https://www.slant.co/topics/543/versus/~xunit-net_vs_nunit_vs_mstest">What are the best unit testing frameworks for .NET?</a></p>
 </blockquote>
 </section>
-<section >
-<h3>FluentAssertion &amp; Shouldly</h3>
+<section id="languages.fa">
+<h2>FluentAssertion &amp; Shouldly</h2>
 <ul>
 <li>started with <strong>Shouldly</strong> (used in PluralSight course)</li>
 <li>switched later to <strong>FluentAssertions</strong> (seen as better alternative)</li>
@@ -553,7 +537,16 @@ felt to be more logical/intuitive and aligned with C# language<br />
 <img src="./images/2019-08.FluentAssertions.03.png" alt="" /></p>
 </section>
 <section >
-<h3>F#, ExcelProvider</h3>
+<section id="languages.fs">
+<h2>F-Sharp</h2>
+<ul>
+<li>F# Make</li>
+<li>ExcelProvider</li>
+</ul>
+</section>
+<section >
+<h2>F# Make (FAKE)</h2>
+<h2>ExcelProvider</h2>
 <blockquote>
 <p>Challenge:<br />
 "use Excel sheets to create a BVMS configuration"</p>
@@ -589,18 +582,46 @@ F# type provider for Excel
 </section>
 </section>
 <section >
-<section id="Wiki.2019-09">
-<h2>BVMS UI Automation Wiki</h2>
+<section id="platforms">
+<h1>Platforms</h1>
+</section>
+<section >
+<h3>Table of Contents</h3>
 <ul>
-<li>started to create a project Wiki</li>
-<li>based on Azure DevOps (Git &amp; Markdown)</li>
-<li>capture knowledge about the BVMS UI Automation</li>
-<li>provide SMM, SDS,...</li>
+<li>
+<a href="#/platforms.azure">Azure DevOps</a><br />
+(ALM platform with Wiki, pipelines, ...)
+</li>
+</ul>
+</section>
+</section>
+<section >
+<section id="AzureDevops.2020-02">
+<h2>Azure DevOps</h2>
+<ul>
+<li>successor/evolution of Visual Studio Team Services</li>
+<li>Repositories, Pipelines, Artifacts, Boards, Test Management</li>
+<li>Cloud and on-premises</li>
 </ul>
 </section>
 <section >
-<h3>Start with some basic knowledge</h3>
-<p><img src="./images/2019-09.Wiki.01.png" alt="" /></p>
+<h2>Virtual Infrastructure</h2>
+<ul>
+<li>step into the VS Enterprise benefits</li>
+<li>BVMS provisioning for a VMs</li>
+</ul>
+</section>
+<section >
+<h2>Build Pipeline based on yaml</h2>
+<ul>
+<li>created <code>yaml</code>-based build pipeline</li>
+<li>pipeline as code, infrastructure as code</li>
+</ul>
+<p><img src="./images/2019-09.Azure.BuildPipeline.01.png" alt="" /></p>
+</section>
+<section >
+<h2>Release Pipeline</h2>
+<p><img src="./images/2020-02.Azure.ReleasePipeline.01.png" alt="" /></p>
 </section>
 </section>
 <section id="others">
