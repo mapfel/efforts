@@ -254,8 +254,16 @@ Road ahead and decision about future of VCS?
 <li>see <a href="#/platforms/azure">Azure DevOps</a></li>
 </ul>
 </section>
-<section >
-<h3>Fake</h3>
+<section id="techniques.ba">
+<h2>F# Make (FAKE)</h2>
+<ul>
+<li>cross platform automation system, mainly used for builds and releases</li>
+<li>the DSL was designed to be succinct, typed, declarative, extensible and easy to use</li>
+<li>all benefits of the .NET Framework and functional programming can be used, including the extensive class library, powerful debuggers and integrated development environments</li>
+</ul>
+<blockquote>
+<p><a href="https://fake.build/">FAKE</a></p>
+</blockquote>
 </section>
 </section>
 <section >
@@ -271,7 +279,15 @@ Road ahead and decision about future of VCS?
 </section>
 </section>
 <section >
-<section id="Wiki.2019-09">
+<section >
+<h2>Wiki</h2>
+<ul>
+<li>currently not established</li>
+<li>nowadays based on Markdown and Git</li>
+<li>also Microsoft uses that approach now for MSDN</li>
+</ul>
+</section>
+<section >
 <h2>BVMS UI Automation Wiki</h2>
 <ul>
 <li>started to create a project Wiki</li>
@@ -281,8 +297,6 @@ Road ahead and decision about future of VCS?
 </ul>
 </section>
 <section >
-<h3>Start with some basic knowledge</h3>
-<p><img src="./images/2019-09.Wiki.01.png" alt="" /></p>
 <h3>Technical Wiki</h3>
 <ul>
 <li>SharePoint Wiki is not a Wiki</li>
@@ -307,8 +321,8 @@ a lot of limitations
 <blockquote>
 <p><a href="http://mapfel.github.io/wiki-presentation">Wiki-Presentation</a></p>
 </blockquote>
-</section>
-<section >
+<h3>Start with some basic knowledge</h3>
+<p><img src="./images/2019-09.Wiki.01.png" alt="" /></p>
 <h3>Start with content</h3>
 <ul>
 <li>Prepared a show case for a <a href="https://dev.azure.com/pas4/Applications/_wiki/wikis/Applications.wiki?pagePath=%2FREADME">tWiki</a></li>
@@ -349,19 +363,22 @@ Git
 <section >
 <h2>Tools Overview</h2>
 <ul>
-<li>AOP with PostSharp</li>
-<li>Fake</li>
+<li><a href="#/tools.postsharp">AOP with PostSharp</a></li>
 <li><a href="#/tools.docfx">DocFX</a></li>
-<li>ReSharper</li>
 <li><a href="#/tools.other">Other Tools</a></li>
+<li>Fake</li>
+<li>ReSharper</li>
 </ul>
 </section>
 <section >
-<h2>AOP with PostSharp</h2>
 <ul>
 <li>
-get rid of primitive obsessions<br />
-e.g. <code>int</code> data types with restricted value range
+<p>id : tools.postsharp</p>
+<h2>AOP with PostSharp</h2>
+</li>
+<li>
+<p>get rid of primitive obsessions<br />
+e.g. <code>int</code> data types with restricted value range</p>
 </li>
 </ul>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
@@ -615,13 +632,8 @@ felt to be more logical/intuitive and aligned with C# language<br />
 <section >
 <h2>F# Make (FAKE)</h2>
 <ul>
-<li>cross platform automation system, mainly used for builds and releases</li>
-<li>the DSL was designed to be succinct, typed, declarative, extensible and easy to use</li>
-<li>all benefits of the .NET Framework and functional programming can be used, including the extensive class library, powerful debuggers and integrated development environments</li>
+<li>see <a href="#/techniques.ba">Buid Automation, Fake</a></li>
 </ul>
-<blockquote>
-<p><a href="https://fake.build/">FAKE</a></p>
-</blockquote>
 </section>
 <section >
 <h2>ExcelProvider</h2>
