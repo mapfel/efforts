@@ -258,6 +258,78 @@ rethink fluent API
 </section>
 </section>
 <section >
+<section id="Wiki.2019-09">
+<h2>BVMS UI Automation Wiki</h2>
+<ul>
+<li>started to create a project Wiki</li>
+<li>based on Azure DevOps (Git &amp; Markdown)</li>
+<li>capture knowledge about the BVMS UI Automation</li>
+<li>provide SMM, SDS,...</li>
+</ul>
+</section>
+<section >
+<h3>Start with some basic knowledge</h3>
+<p><img src="./images/2019-09.Wiki.01.png" alt="" /></p>
+<h3>Technical Wiki</h3>
+<ul>
+<li>SharePoint Wiki is not a Wiki</li>
+<li>
+a lot of limitations
+<ul>
+<li>no real history for easily scanning for changes</li>
+<li>no offline capabilities</li>
+<li>bundling belonging things into "atomic" commits not possible</li>
+<li>allows too much individual formatting</li>
+<li>
+?: What about versioning?
+<ul>
+<li>With conflict management?</li>
+<li>With diffing?</li>
+</ul>
+</li>
+<li>?: no commit message?</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><a href="http://mapfel.github.io/wiki-presentation">Wiki-Presentation</a></p>
+</blockquote>
+</section>
+<section >
+<h3>Start with content</h3>
+<ul>
+<li>Prepared a show case for a <a href="https://dev.azure.com/pas4/Applications/_wiki/wikis/Applications.wiki?pagePath=%2FREADME">tWiki</a></li>
+<li>
+XCopy-deployable Apps
+<ul>
+<li>Deployment Guidelines</li>
+<li>Details about some tools</li>
+</ul>
+</li>
+<li>
+IDE and Plugins
+<ul>
+<li>Visual Studio IG</li>
+<li>ReSharper</li>
+</ul>
+</li>
+<li>
+Git
+<ul>
+<li>Introduction</li>
+<li>Workflows</li>
+<li>Best Practices: Branching</li>
+<li>Best Practices: Commits</li>
+<li>Troubleshooting</li>
+</ul>
+</li>
+</ul>
+</section>
+<section >
+<p><img src="./images/2019-07.TechTalk.01.png" alt="" /></p>
+</section>
+</section>
+<section >
 <section id="tools">
 <h1>Tools</h1>
 </section>
@@ -272,7 +344,7 @@ rethink fluent API
 </ul>
 </section>
 <section >
-<h3>AOP with PostSharp</h3>
+<h2>AOP with PostSharp</h2>
 <ul>
 <li>
 get rid of primitive obsessions<br />
@@ -418,8 +490,6 @@ needs awareness about workflows<br />
 <li><strong>Markdown</strong>: productive markup language for Wikis and other documentations</li>
 </ul>
 </section>
-</section>
-<section >
 <section >
 <h2>Slack</h2>
 <ul>
@@ -479,21 +549,6 @@ redirecting of the sub domain was made in the past<br />
 </section>
 </section>
 <section >
-<section id="Wiki.2019-09">
-<h2>BVMS UI Automation Wiki</h2>
-<ul>
-<li>started to create a project Wiki</li>
-<li>based on Azure DevOps (Git &amp; Markdown)</li>
-<li>capture knowledge about the BVMS UI Automation</li>
-<li>provide SMM, SDS,...</li>
-</ul>
-</section>
-<section >
-<h3>Start with some basic knowledge</h3>
-<p><img src="./images/2019-09.Wiki.01.png" alt="" /></p>
-</section>
-</section>
-<section >
 <section id="languages">
 <h1>Languages and Frameworks</h1>
 </section>
@@ -501,7 +556,7 @@ redirecting of the sub domain was made in the past<br />
 <h2>Table of Contents</h2>
 <ul>
 <li><a href="#/languages.xunit">xUnit</a></li>
-<li>[FluentAssertions, Shouldly}(#/languages.fa)</li>
+<li><a href="#/languages.fa">FluentAssertions, Shouldly</a></li>
 <li><a href="languages.fs">F#</a></li>
 </ul>
 </section>
@@ -546,6 +601,16 @@ felt to be more logical/intuitive and aligned with C# language<br />
 </section>
 <section >
 <h2>F# Make (FAKE)</h2>
+<ul>
+<li>cross platform automation system, mainly used for builds and releases</li>
+<li>the DSL was designed to be succinct, typed, declarative, extensible and easy to use</li>
+<li>all benefits of the .NET Framework and functional programming can be used, including the extensive class library, powerful debuggers and integrated development environments</li>
+</ul>
+<blockquote>
+<p><a href="https://fake.build/">FAKE</a></p>
+</blockquote>
+</section>
+<section >
 <h2>ExcelProvider</h2>
 <blockquote>
 <p>Challenge:<br />
@@ -724,65 +789,6 @@ Creation of an organization as a playground
 </li>
 </ul>
 <p><img src="./images/2019-07.TechTalk.02.png" alt="" /></p>
-</section>
-<section >
-<h3>Technical Wiki</h3>
-<ul>
-<li>SharePoint Wiki is not a Wiki</li>
-<li>
-a lot of limitations
-<ul>
-<li>no real history for easily scanning for changes</li>
-<li>no offline capabilities</li>
-<li>bundling belonging things into "atomic" commits not possible</li>
-<li>allows too much individual formatting</li>
-<li>
-?: What about versioning?
-<ul>
-<li>With conflict management?</li>
-<li>With diffing?</li>
-</ul>
-</li>
-<li>?: no commit message?</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p><a href="http://mapfel.github.io/wiki-presentation">Wiki-Presentation</a></p>
-</blockquote>
-</section>
-<section >
-<h3>Start with content</h3>
-<ul>
-<li>Prepared a show case for a <a href="https://dev.azure.com/pas4/Applications/_wiki/wikis/Applications.wiki?pagePath=%2FREADME">tWiki</a></li>
-<li>
-XCopy-deployable Apps
-<ul>
-<li>Deployment Guidelines</li>
-<li>Details about some tools</li>
-</ul>
-</li>
-<li>
-IDE and Plugins
-<ul>
-<li>Visual Studio IG</li>
-<li>ReSharper</li>
-</ul>
-</li>
-<li>
-Git
-<ul>
-<li>Introduction</li>
-<li>Workflows</li>
-<li>Best Practices: Branching</li>
-<li>Best Practices: Commits</li>
-<li>Troubleshooting</li>
-</ul>
-</li>
-</ul>
-</section>
-<section >
-<p><img src="./images/2019-07.TechTalk.01.png" alt="" /></p>
 </section>
 </section>
 <section >
