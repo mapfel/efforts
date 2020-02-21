@@ -99,8 +99,6 @@ find unicode arrows [here](http://xahlee.info/comp/unicode_arrows.html)<br/>
 <li>Tech Talk JUL 2019</li>
 </ul>
 </section>
-</section>
-<section >
 <section id="Organizational">
 <h2>Organizational topics</h2>
 <ul>
@@ -139,11 +137,42 @@ some keywords
 </ul>
 </section>
 </section>
-<section >
-<h2>Techniques &amp; Frameworks</h2>
+<section id="techniques">
+<h1>Techniques</h1>
 </section>
 <section >
-<section id="Techniques-Frameworks">
+<section >
+<h2>Overview</h2>
+<ul>
+<li>API Design</li>
+<li>Fluent Interface (ensure an easy UX)</li>
+<li>Dependency Management (1st class citizen)</li>
+</ul>
+</section>
+<section >
+<h2>API Design</h2>
+<ul>
+<li>abstract into view of customer</li>
+<li>carve out distinction between SDK and API</li>
+<li>structure DevTree appropriate</li>
+<li>
+rethink fluent API
+
+  <code>cs
+  var device = Email.Create(deviceName)
+      .WithSmtpServerName(serverName)
+      .WithSenderAddress(sender)
+      .WithSSL(useSsl)
+      ...</code>
+</li>
+</ul>
+</section>
+</section>
+<section id="techniques">
+<h1>Frameworks</h1>
+</section>
+<section >
+<section >
 <h2>Techniques &amp; Frameworks</h2>
 <ul>
 <li>Aspect Oriented Programming (AOP)</li>
